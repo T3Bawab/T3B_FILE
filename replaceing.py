@@ -1,14 +1,7 @@
+gg = open('headers.txt','r').read().splitlines()
 
-#file 
-with open('youerfile.txt', 'r') as file :
-    filedata = file.read()
-
-
-
-    #Replace the target string
-    filedata = filedata.replace("",'')
-
-# Write the file out again
-
-with open('youerfile.txt', 'w') as file:
-  file.write(filedata)
+for k in gg :
+    c1 = k.split(':')[0]
+    c2 = k.split(': ')[1]
+    with open('autput.txt','a') as ggg :
+        ggg.write(f"'{c1}': '{c2}',\n")
